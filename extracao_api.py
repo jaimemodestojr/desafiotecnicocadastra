@@ -25,7 +25,7 @@ class CoinCapAPI:
             }
             
             try:
-                print(f"Buscando {limit} ativos com offset {offset}...")
+                print(f"Buscando {limit} ativos com offset {offset}")
                 response = requests.get(endpoint, headers=self._headers, params=params)
 
                 response.raise_for_status()
@@ -43,4 +43,5 @@ class CoinCapAPI:
                 return None
         
         print(f"Total de {len(all_assets)} ativos encontrados.")
+
         return all_assets
